@@ -7,7 +7,7 @@
     </div> -->
     <ion-title>{{title}}</ion-title>
 
-    <div (click)="abreFiltro()" style="position: absolute;
+    <div *ngIf="aba == 1" (click)="abreFiltro()" style="position: absolute;
         right: 20px;
         height: 100%;
         filter: brightness(0);
@@ -20,41 +20,43 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
     <div class="home-body home-body-1">
-        <div class="cardRota" *ngFor="let rota of _rotas">
-            <div class="cardRota-img">
-                <img src="{{rota._foto}}" />
-            </div>
-            <div class="cardRota-info">
-                <div class="cardRota-local">
-                    <span>
-                        {{rota._localPartida}}
-                    </span>
-                    <ion-icon name="arrow-forward" style="color:#F05782; padding: 0 4px"></ion-icon>
-                    <span>
-                        {{rota._localDestino}}
-                    </span>
+        <ion-scroll scrollY="true" style="height: 100%;width: 100%;">
+            <div class="cardRota" *ngFor="let rota of _rotas">
+                <div class="cardRota-img">
+                    <img src="{{rota._foto}}" />
                 </div>
-                <div class="bottom-items">
-                    <span>
-                        <ion-icon name="md-time" class="bottom-icon-color"></ion-icon>
-                        {{rota._horario}}
-                    </span>
-                    <span>
-                      <ion-icon name="md-contact" class="bottom-icon-color"></ion-icon>
-                      {{rota._nome}}
-                    </span>
-                    <span>
-                      <ion-icon name="md-star" class="bottom-icon-color" style="color: #E6A23C"></ion-icon>
-                      {{rota._avaliacaoMedia}}
-                    </span>
+                <div class="cardRota-info">
+                    <div class="cardRota-local">
+                        <span>
+                            {{rota._localPartida}}
+                        </span>
+                        <ion-icon name="arrow-forward" style="color:#F05782; padding: 0 4px"></ion-icon>
+                        <span>
+                            {{rota._localDestino}}
+                        </span>
+                    </div>
+                    <div class="bottom-items">
+                        <span>
+                            <ion-icon name="md-time" class="bottom-icon-color"></ion-icon>
+                            {{rota._horario}}
+                        </span>
+                        <span>
+                        <ion-icon name="md-contact" class="bottom-icon-color"></ion-icon>
+                        {{rota._nome}}
+                        </span>
+                        <span>
+                        <ion-icon name="md-star" class="bottom-icon-color" style="color: #E6A23C"></ion-icon>
+                        {{rota._avaliacaoMedia}}
+                        </span>
+                    </div>
+                </div>
+                <div class="cardRota-conteudo-icone">
+                    <ion-icon name="ios-arrow-forward-outline" > </ion-icon>
                 </div>
             </div>
-            <div class="cardRota-conteudo-icone">
-                <ion-icon name="ios-arrow-forward-outline" > </ion-icon>
-            </div>
-        </div>
+        </ion-scroll>
         <div (click)="irParaCadastrarRota()" class="adicionar-novo">
             +
         </div>
@@ -130,7 +132,7 @@
         </div>
       </div>
 
-        <div id="backgroundDark" class="background-hide" style="background:black; filter:opacity(0.5); width:100vw; height:100vh; z-index: 1;transition: 1s; top: 0; position: absolute;">
+        <div id="backgroundDark" class="background-hide" style="background:black;pointer-events: none ;filter:opacity(0.5); width:100vw; height:100%; z-index: 1;transition: 1s; top: 0; position: absolute;">
         </div>
         <div class="filtro filtro-hide">
             <div class="cadastro-body" style="width: 85vw; margin: auto;">

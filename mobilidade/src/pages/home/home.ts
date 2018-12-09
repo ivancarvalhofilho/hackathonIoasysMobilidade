@@ -23,6 +23,7 @@ import { CriarRotaPage } from '../criar-rota/criar-rota';
 export class HomePage {
 
   private _rotas: Array<Rota>;
+  private aba: number = 1;
   private _historicoSaldos: Array<HistoricoSaldo>;
   public title = "Lista de rotas";
   billList: AngularFireList<any>;
@@ -33,7 +34,7 @@ export class HomePage {
     public navParams: NavParams) {
 
     this._rotas = new Array<Rota>();
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < 20; i++){
       var rota1 : Rota = new Rota();
       rota1.localPartida= "Praça dos bancos";
       rota1.localDestino = "UFLA";
@@ -41,7 +42,7 @@ export class HomePage {
     }
 
     this._historicoSaldos = new Array<HistoricoSaldo>();
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < 20; i++){
       var historico: HistoricoSaldo = new HistoricoSaldo();
       historico.titulo= "Desconto ";
       historico.valor = "R$" + (i+1) + ",00";
@@ -67,12 +68,15 @@ export class HomePage {
   }
 
   trocaMenu(codLista) {
+      this.aba = codLista;
     $(".botoesRodape > div > ion-icon").removeClass("bottom-icon-color-ativo");
     $(".botoesRodape > div:nth-child(" + codLista + ") > ion-icon").addClass("bottom-icon-color-ativo");
     $(".home-body").hide(); 
     $(".home-body-" + codLista ).show();
-      if (codLista == 2){
+    if (codLista == 2){
         this.title = "Transações"; 
+    } else if  (codLista == 3) {
+        this.title = "Mensagens";
     } else {
         this.title = "Lista de rotas";
     }
