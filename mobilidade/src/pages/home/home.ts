@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Rota } from '../../model/rota';
+import * as $ from 'jquery';
 
 /**
  * Generated class for the HomePage page.
@@ -20,14 +21,12 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this._rotas = new Array<Rota>();
-    var rota1 : Rota = new Rota();
-    rota1.localPartida= "fuasd";
-    rota1.localDestino = "asd";
-    var rota2 : Rota = new Rota();
-    rota2.localPartida= "kkk";
-    rota2.localDestino = "LoL";
-    this.rotas.push(rota1);
-    this.rotas.push(rota2);
+    for(var i = 0; i < 10; i++){
+      var rota1 : Rota = new Rota();
+      rota1.localPartida= "fuasd" + i;
+      rota1.localDestino = "asd" + i;
+      this.rotas.push(rota1);
+    }
   }
 
   ionViewDidLoad() {
@@ -40,4 +39,13 @@ export class HomePage {
   public set rotas(value: Array<Rota>) {
     this._rotas = value;
   }
+
+
+  trocaMenu(codLista) {
+    $(".botoesRodape > div > ion-icon").removeClass("bottom-icon-color-ativo");
+    $(".botoesRodape > div:nth-child(" + codLista + ") > ion-icon").addClass("bottom-icon-color-ativo");
+    $(".home-body").hide();
+    $(".home-body-" + codLista ).show();
+  }
+
 }

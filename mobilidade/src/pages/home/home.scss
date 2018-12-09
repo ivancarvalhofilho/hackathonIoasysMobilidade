@@ -2,5 +2,126 @@ page-home {
 
 }
 .cardRota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid rgba($color: #000000, $alpha: 0.075);
+}
 
+.home-body-1{
+    font-family: "Roboto";
+
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.cardRota-img > img {
+    border-radius: 3em;
+    width: 35px;
+    height: 35px;
+}
+
+.cardRota-local {
+    border-radius: 3em;
+}
+
+
+.cardRota-local-arrow {
+    // border-radius: 3em;
+}
+
+.cardRota-info {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.cardRota-info>div:nth-child(1) {
+    font-weight: 500;
+    padding-bottom: 5px;
+    color: #303133;
+    padding-left: 4px;
+}
+
+.cardRota-info>div:nth-child(2) {
+    color: #303133;
+    font-size: 11px;
+}
+
+.bottom-items{
+    display: flex;
+    align-items: center;
+}
+
+.bottom-items > span{
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-icon-color{
+    color: #C0C4CC;
+    padding: 0 4px;
+}
+
+
+
+.bottom-icon-color-ativo{
+    color: #42A5F5;
+    padding: 0 4px;
+}
+
+
+
+
+
+.botoesRodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 2px 0px rgba(74, 74, 74, 0.97);
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.botoesRodape > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.botoesRodape-inativo {
+    background-color: #a8a8a8;
+    color: white; 
+}
+
+
+// BODY 2
+.home-body-2{
+    font-family: "Roboto";
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background: #F5F5F5;
+}
+.saldo{
+    width: 90vw;
+    margin: auto;
+    height: 77%;
+    top: 2%;
+    position: relative;
+    border: 1px solid #DCDFE6;
+    border-radius: 5px;
+    background: white;
 }

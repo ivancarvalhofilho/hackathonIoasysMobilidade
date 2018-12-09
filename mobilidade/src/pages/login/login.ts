@@ -23,7 +23,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  irParaHome() {
+  irParaHome () {
       this.navCtrl.push(HomePage);
   }
 }

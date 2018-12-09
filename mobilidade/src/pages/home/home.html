@@ -1,45 +1,68 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>home</ion-title>
+    <!-- <div>
+      <ion-icon name="menu"></ion-icon>
+    </div> -->
+    <ion-title>Lista de rotas</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-    <div>
+<ion-content >
+    <div class="home-body home-body-1">
         <div class="cardRota" *ngFor="let rota of _rotas">
-            <div class="cardJogos-conteudo-info">
-                <span>
-                    {{rota._nome}}
-                </span>
-                <span>
-                    {{rota._localPartida}}
-                </span>
-                <span>
-                    {{rota._localDestino}}
-                </span>
-                <span>
-                    {{rota._horario}}
-                </span>
-                <span>
-                    {{rota._avaliacaoMedia}}
-                </span>
-            </div>
-            <div class="cardJogos-conteudo-icone">
-                >
-            </div>
-        </div>
-    </div>
-<ion-card >
-    <ion-card-content >
-        <div class="cardJogos">
-            <div class="cardJogos-img">
+            <div class="cardRota-img">
                 <img src="{{rota._foto}}" />
             </div>
-           
+            <div class="cardRota-info">
+                <div class="cardRota-local">
+                    <span>
+                        {{rota._localPartida}}
+                    </span>
+                    <ion-icon name="arrow-forward" style="color:#42A5F5; padding: 0 4px"></ion-icon>
+                    <span>
+                        {{rota._localDestino}}
+                    </span>
+                </div>
+                <div class="bottom-items">
+                    <span>
+                        <ion-icon name="md-time" class="bottom-icon-color"></ion-icon>
+                        {{rota._horario}}
+                    </span>
+                    <span>
+                      <ion-icon name="md-contact" class="bottom-icon-color"></ion-icon>
+                      {{rota._nome}}
+                    </span>
+                    <span>
+                      <ion-icon name="md-star" class="bottom-icon-color" style="color: #E6A23C"></ion-icon>
+                      {{rota._avaliacaoMedia}}
+                    </span>
+                </div>
+            </div>
+            <div class="cardRota-conteudo-icone">
+                <ion-icon name="ios-arrow-forward-outline" > </ion-icon>
+            </div>
         </div>
-    </ion-card-content>
-</ion-card>
+      </div>
+
+
+      <div class="home-body home-body-2">
+        <div class="saldo">
+
+        </div>
+      </div>
+      
+      <div class="botoesRodape">
+        <div (click)="trocaMenu(1)">
+          <ion-icon  style="font-size: 24px;" name="md-car" class="bottom-icon-color bottom-icon-color-ativo"></ion-icon>
+        </div>
+        <div (click)="trocaMenu(2)">
+            <ion-icon   style="font-size: 24px;" name="md-cash" class="bottom-icon-color"></ion-icon>
+        </div>
+        <div (click)="trocaMenu(3)">
+            <ion-icon   style="font-size: 24px;" name="md-chatbubbles" class="bottom-icon-color"></ion-icon>
+        </div>
+      </div>
 </ion-content>
