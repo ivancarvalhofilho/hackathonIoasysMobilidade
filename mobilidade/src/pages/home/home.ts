@@ -44,7 +44,7 @@ export class HomePage {
   trocaMenu(codLista) {
     $(".botoesRodape > div > ion-icon").removeClass("bottom-icon-color-ativo");
     $(".botoesRodape > div:nth-child(" + codLista + ") > ion-icon").addClass("bottom-icon-color-ativo");
-    $(".home-body").hide();
+    $(".home-body").hide(); 
     $(".home-body-" + codLista ).show();
   }
 

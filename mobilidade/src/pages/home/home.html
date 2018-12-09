@@ -4,7 +4,7 @@
     <!-- <div>
       <ion-icon name="menu"></ion-icon>
     </div> -->
-    <ion-title>Lista de rotas</ion-title>
+    <ion-title>Deixar dinamico</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -48,12 +48,35 @@
       </div>
 
 
-      <div class="home-body home-body-2">
+      <div class="home-body home-body-2" style="display:none;">
         <div class="saldo">
+          <div class="saldo-valor"> 
+            R$58,00
+          </div>
+          <div class="saldo-info"> 
+            Você já economizou <span class="green">R$ 12,50</span> nesse mês comprando em nossos parceiros.
+          </div>
+          <div class="paginacao">
+            <div class="paginacao-1"></div>
+            <div class="paginacao-2 paginacao-2-inativo"></div> 
+          </div>
+        </div>
 
+        <div class="saldo-button">
+          <div class="saldo-button-1">
+            <ion-icon name="md-arrow-down" class="bottom-icon-color-ativo icon-free-pos"></ion-icon>
+            <div><ion-icon name="md-cash" style="color:#42A5F5; padding: 0 4px; font-size: 24px;"></ion-icon></div>
+            <div>Recarregar</div>
+          </div>
+          <div class="saldo-button-2">
+            <ion-icon name="md-arrow-up" class="bottom-icon-color-ativo icon-free-pos"></ion-icon>
+            <div><ion-icon name="md-cash" style="color:#42A5F5; padding: 0 4px; font-size: 24px;"></ion-icon></div>
+            <div>Pagar</div>
+          </div>
         </div>
       </div>
       
+
       <div class="botoesRodape">
         <div (click)="trocaMenu(1)">
           <ion-icon  style="font-size: 24px;" name="md-car" class="bottom-icon-color bottom-icon-color-ativo"></ion-icon>

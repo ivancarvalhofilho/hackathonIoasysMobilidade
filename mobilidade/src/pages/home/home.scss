@@ -111,17 +111,84 @@ page-home {
 .home-body-2{
     font-family: "Roboto";
     width: 100vw;
-    height: 100vh;
+    height: 90%;
     margin: auto;
     background: #F5F5F5;
 }
-.saldo{
-    width: 90vw;
-    margin: auto;
-    height: 77%;
-    top: 2%;
-    position: relative;
+
+.saldo,.saldo-button-1,.saldo-button-2 {
     border: 1px solid #DCDFE6;
     border-radius: 5px;
     background: white;
+    height: inherit;
+    width: inherit;
+
+    margin: 20px 0px;
+}
+.saldo-button{
+    width: 90vw;
+    height: 29%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.saldo-button > div{
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 48%;
+    height: auto;
+    position: relative;
+}
+.saldo {
+    width: 90vw;
+    margin: auto;
+    height: 73%;
+    top: 2%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    padding: 20px;
+
+    font-family: 'Roboto';
+    color: #303133;
+}
+.saldo-valor{
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 15px; 
+}
+.green{
+    color: #67C23A;
+    font-weight: 500;
+}
+
+.icon-free-pos{
+    font-size: 15px;
+    position: absolute;
+    top: 17%;
+    left: 51%;
+}
+
+.paginacao{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 22px);
+}
+
+.paginacao > div{
+    margin: 5px;
+    border-radius: 3em;
+    background: #42A5F5;
+    height: 12px;
+    width: 12px;
+}
+.paginacao-1-inativo, .paginacao-2-inativo {
+    background: #DCDFE6;
 }
