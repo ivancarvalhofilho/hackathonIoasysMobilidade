@@ -1,0 +1,61 @@
+<!--
+  Generated template for the CriarRotaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar nova rota</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <div class="cadastro-body" style="width: 85vw; margin: auto;">
+        <div class="input-login">
+            <span>Partida</span>
+            <input type="text" placeholder="aaa" >
+            <ion-icon name="md-pin"></ion-icon>
+        </div>
+        <div class="input-login">
+            <span>Destino</span>
+            <input type="text" placeholder="aaa" >
+            <ion-icon name="md-pin"></ion-icon>
+        </div>
+        <div class="input-metade">
+            <div class="input-login">
+                <span>Quando?</span>
+                <input type="text" placeholder="aaa" >
+                <ion-icon name="md-calendar"></ion-icon>
+            </div>
+            <div class="input-login">
+                <span>Horario</span>
+                <input type="text" placeholder="aaa" >
+
+                <ion-icon name="md-time"></ion-icon>
+            </div>
+        </div>
+        <div style="position: relative; left:-20px">
+            <ion-item>
+                <ion-label>Repete</ion-label>
+                <ion-checkbox  color="pink"  [(ngModel)]="pepperoni"></ion-checkbox>
+            </ion-item>
+        </div>
+        <div class="quantidade-vagas">
+            <span>Quantas vagas?</span>
+            <div>
+                <div (click)="trocaQuantidade(1)">1</div>
+                <div (click)="trocaQuantidade(2)">2</div>
+                <div (click)="trocaQuantidade(3)">3</div>
+                <div (click)="trocaQuantidade(4)">4</div>
+            </div>
+        </div>
+        <button (click)="this.navCtrl.pop()" ion-button color="pink" class="width-100">
+            <ion-icon name="md-checkmark" style="padding-right:10px"></ion-icon> Cadastrar
+        </button>
+    </div>
+
+</ion-content>

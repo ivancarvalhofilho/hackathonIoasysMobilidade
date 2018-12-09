@@ -238,3 +238,20 @@ page-home {
     color: #303133;
     font-size: 20px;
 }
+
+
+.adicionar-novo{
+    position: fixed;
+    border-radius: 3em;
+    height: 50px;
+    width: 50px;
+    bottom: 60px;
+    right: 50px;
+    color: white;
+    background: #F05782;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 4px 6px 0px rgba(0, 0, 0, 0.46);
+}

@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomeEstabPage } from '../pages/home-estab/home-estab';
+import { CriarRotaPage } from '../pages/criar-rota/criar-rota';
 // import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HomeEstabPage } from '../pages/home-estab/home-estab';
     MyApp,
     LoginPage,
     HomeEstabPage,
-    HomePage
+    HomePage,
+    CriarRotaPage
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { HomeEstabPage } from '../pages/home-estab/home-estab';
     MyApp,
     HomeEstabPage,
     LoginPage,
+    CriarRotaPage,
     HomePage
   ],
   providers: [

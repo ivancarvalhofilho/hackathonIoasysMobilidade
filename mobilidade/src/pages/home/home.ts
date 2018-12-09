@@ -5,6 +5,7 @@ import * as $ from 'jquery';
 import { HistoricoSaldo } from '../../model/historico';
 import { apiFirebaseProvider } from '../../providers/apiFirebase';
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+import { CriarRotaPage } from '../criar-rota/criar-rota';
 // import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 /**
  * Generated class for the HomePage page.
@@ -83,5 +84,9 @@ export class HomePage {
     $(".paginacao-1").toggleClass("paginacao-1-inativo");
     $(".paginacao-2").toggleClass("paginacao-2-inativo");
   } 
+
+    irParaCadastrarRota() {
+        this.navCtrl.push(CriarRotaPage);
+    }
 
 }
