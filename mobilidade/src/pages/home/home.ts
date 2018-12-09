@@ -89,4 +89,9 @@ export class HomePage {
         this.navCtrl.push(CriarRotaPage);
     }
 
+    abreFiltro() { 
+        $(".filtro").toggleClass("filtro-hide");
+        $("#backgroundDark").toggleClass("background-hide");
+
+    }
 }

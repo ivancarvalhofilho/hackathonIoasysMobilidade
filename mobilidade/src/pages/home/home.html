@@ -1,10 +1,20 @@
 <ion-header>
 
   <ion-navbar>
+    
     <!-- <div>
       <ion-icon name="menu"></ion-icon>
     </div> -->
     <ion-title>{{title}}</ion-title>
+
+    <div (click)="abreFiltro()" style="position: absolute;
+        right: 20px;
+        height: 100%;
+        filter: brightness(0);
+        top: 15px;
+        font-size: 22px;">
+        <ion-icon name="md-funnel" class="bottom-icon-color"></ion-icon>
+    </div>
   </ion-navbar>
 
 </ion-header>
@@ -119,5 +129,41 @@
             <ion-icon   style="font-size: 24px;" name="md-chatbubbles" class="bottom-icon-color"></ion-icon>
         </div>
       </div>
+
+        <div id="backgroundDark" class="background-hide" style="background:black; filter:opacity(0.5); width:100vw; height:100vh; z-index: 1;transition: 1s; top: 0; position: absolute;">
+        </div>
+        <div class="filtro filtro-hide">
+            <div class="cadastro-body" style="width: 85vw; margin: auto;">
+                <div class="input-login">
+                    <span>Você está aqui</span>
+                    <input type="text" value="Rua Chagas Dória - Murad, Lavras - MG">
+                    <ion-icon name="md-pin"></ion-icon>
+                </div>
+                <div class="input-login">
+                    <span>Qual o seu destino</span>
+                    <input type="text" placeholder="Pra onde você quer ir">
+                    <ion-icon name="md-pin"></ion-icon>
+                </div>
+
+                <div style="position: relative; left:-20px">
+                    <ion-item>
+                        <ion-label>Apenas motoristas mulheres</ion-label>
+                        <ion-checkbox color="pink" [(ngModel)]="pepperoni"></ion-checkbox>
+                    </ion-item>
+                </div>
+                <span style="top: 18px; position: relative; z-index: 1;">
+                    Com um raio de precisão de
+                </span>
+                <ion-item id="range">
+                    <ion-range min="10" max="1000" [(ngModel)]="saturation" color="pink">
+                    </ion-range>
+                </ion-item>
+                <span id="spanRange" *ngIf="saturation == null">0</span>
+                <span id="spanRange">{{saturation}}m</span>
+                <button (click)="abreFiltro()" color="pink" style="height:30px; margin-top: 15px" ion-button class="width-100">
+                    <ion-icon name="md-checkmark" style="padding-right:10px"></ion-icon> Filtrar
+                </button>
+            </div>
+        </div>
 
 </ion-content>
