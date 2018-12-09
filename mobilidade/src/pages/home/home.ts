@@ -3,7 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Rota } from '../../model/rota';
 import * as $ from 'jquery';
 import { HistoricoSaldo } from '../../model/historico';
-
+import { apiFirebaseProvider } from '../../providers/apiFirebase';
+import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+// import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 /**
  * Generated class for the HomePage page.
  *
@@ -16,12 +18,19 @@ import { HistoricoSaldo } from '../../model/historico';
   selector: 'page-home',
   templateUrl: 'home.html',
 })
+
 export class HomePage {
 
   private _rotas: Array<Rota>;
   private _historicoSaldos: Array<HistoricoSaldo>;
+  public title = "Lista de rotas";
+  billList: AngularFireList<any>;
+
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public afDatabase: AngularFireDatabase,
+    public navParams: NavParams) {
+
     this._rotas = new Array<Rota>();
     for(var i = 0; i < 10; i++){
       var rota1 : Rota = new Rota();
@@ -61,6 +70,11 @@ export class HomePage {
     $(".botoesRodape > div:nth-child(" + codLista + ") > ion-icon").addClass("bottom-icon-color-ativo");
     $(".home-body").hide(); 
     $(".home-body-" + codLista ).show();
+      if (codLista == 2){
+        this.title = "Transações"; 
+    } else {
+        this.title = "Lista de rotas";
+    }
   }
 
   trocaMenuSaldo(codSaldo) {

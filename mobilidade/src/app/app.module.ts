@@ -7,20 +7,36 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { HomeEstabPage } from '../pages/home-estab/home-estab';
+// import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
+    HomeEstabPage,
     HomePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+      AngularFireModule.initializeApp({
+          apiKey: "jmFSdi5B5yzs5atxyd98GCSMilDk0GkBMApYNQkh",
+          authDomain: "movimenta-4ede5.firebaseapp.com",
+          databaseURL: "https://movimenta-4ede5.firebaseio.com",
+          projectId: "movimenta-4ede5",
+          storageBucket: "movimenta-4ede5.appspot.com",     
+          messagingSenderId: "1078883010226"
+      }),
+    //   FirebaseAuthentication,
+       AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomeEstabPage,
     LoginPage,
     HomePage
   ],

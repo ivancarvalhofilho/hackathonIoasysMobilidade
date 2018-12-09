@@ -1,0 +1,37 @@
+page-home-estab {
+
+}
+
+.background-dark {
+    background: rgba($color: #000000, $alpha: 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pop-up {
+    background: white;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+    position: absolute;
+}
+
+.cancel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.QRCODE-icon{
+    width: 280px;
+    height: 280px;
+}
+
+.body-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+}

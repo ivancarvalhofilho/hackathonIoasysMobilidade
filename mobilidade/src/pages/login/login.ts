@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { HomeEstabPage } from '../home-estab/home-estab';
 
 /**
  * Generated class for the LoginPage page.
@@ -26,4 +27,8 @@ export class LoginPage {
   irParaHome () {
       this.navCtrl.push(HomePage);
   }
+  
+    irParaHomeEstab () {
+        this.navCtrl.push(HomeEstabPage);
+    }
 }

@@ -6,9 +6,7 @@
 -->
 <ion-header>
 
-
 </ion-header>
-
 
 <ion-content >
 
@@ -16,24 +14,24 @@
         <div class="background-login"></div>
         <div class="login-body-padding">
             <div class="login-logo">
-                LOGO
+                <img src="assets/imgs/logo-movimenta.png">
             </div>
 
-            <ion-list class="login-form width-90">
-                <ion-item>
-                    <ion-label stacked>Username</ion-label>
-                    <ion-input type="text"></ion-input>
-                </ion-item>
-            
-                <ion-item>
-                    <ion-label stacked>Password</ion-label>
-                    <ion-input type="password"></ion-input>
-                </ion-item>
-            
-            </ion-list>
+            <div>
+                <div class="input-login">
+                    <span>E-mail</span>
+                        <input type="text" placeholder="seu@email.com">
+                        <ion-icon name="md-mail"></ion-icon>
+                </div>
+                <div class="input-login">
+                    <span>Senha</span>
+                        <input type="password" placeholder="****">
+                        <ion-icon name="md-key"></ion-icon>
+                </div>
+            </div>
 
             <div class="width-90">
-                <button  (click)="irParaHome()" ion-button class="width-100"> <ion-icon name="log-in" style="padding-right:10px"></ion-icon> Entrar</button>
+                <button  (click)="irParaHome()" ion-button color="pink" class="width-100"> <ion-icon name="log-in" style="padding-right:10px"></ion-icon> Entrar</button>
             </div>
             <div class="login-barra">
                 <div class="login-barra-child"></div>
@@ -42,7 +40,7 @@
             </div>
 
             <div class="login-alternativo">
-                <div class="login-facebook">
+                <div (click)="irParaHomeEstab()" class="login-facebook">
                 <ion-icon name="logo-facebook"></ion-icon> Entrar com Facebook
                 </div>
                 <div class="login-google">
