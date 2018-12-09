@@ -1,5 +1,7 @@
 {
   "name": "mobilidade",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

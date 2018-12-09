@@ -1,0 +1,85 @@
+.login-body{
+    background: transparent;
+    width: 100%;   
+    height: 100%; 
+    display: block;
+    justify-content: center;
+    align-items:center; 
+}
+
+.background-login{
+    background:url('http://www.frotacia.com.br/wp-content/uploads/2018/01/mobilidade-urbana-fleety2.jpg'); 
+    filter: brightness(0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+.login-body-padding{
+    padding: 0 10px;
+    width: 100%;   
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+}
+.login-logo{
+    background: black;
+    width: 50px;   
+    height: 50px;   
+    color: white;
+}
+
+.login-barra{
+    display: flex;
+    width: 100%;
+    color: white;
+}
+
+
+.login-barra-child{
+    height: 1px;
+    width: 100%;
+    margin: 10px;
+    background: white;
+}
+
+.login-alternativo{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.login-alternativo > div{
+    width: 175px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px; 
+}
+
+.login-facebook{
+    background: blue;
+    border-radius: 5px;
+    color: white;
+}
+
+.login-google{
+    background: white;
+    border-radius: 5px;
+    color: black;
+}
+
+.login-rodape{
+    display: flex;  
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 90%;
+    color: white;
+}
+.width-90{
+    width: 90%;
+}
+.width-100{
+    width: 100%;
+}
